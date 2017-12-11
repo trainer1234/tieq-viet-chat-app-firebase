@@ -17,12 +17,12 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyDVOzY920BZg3nWSHtidI4wOXkSS5mKv4k',
-  authDomain: 'tieqvietchatapp.firebaseapp.com',
-  databaseURL: 'https://tieqvietchatapp.firebaseio.com',
-  projectId: 'tieqvietchatapp',
-  storageBucket: 'tieqvietchatapp.appspot.com',
-  messagingSenderId: '378441525576'
+  apiKey: "AIzaSyBO6KeH2I7E5YWfp5ZeYtFLANS38z4e3KQ",
+  authDomain: "tieqvietchatappdemo.firebaseapp.com",
+  databaseURL: "https://tieqvietchatappdemo.firebaseio.com",
+  projectId: "tieqvietchatappdemo",
+  storageBucket: "tieqvietchatappdemo.appspot.com",
+  messagingSenderId: "125401342759"
 };
 
 const routes: Routes = [

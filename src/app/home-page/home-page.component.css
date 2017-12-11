@@ -11,10 +11,12 @@
   overflow-y: scroll;
 }
 #messages {
+  font-size: 16px;
   background-color: #2d384a !important;
 }
 .author {
-  font-size: 12px;
+  font-size: 10px;
+  color: darkgray;
 }
 .send-message {
   color: #ffffff;
@@ -50,6 +52,7 @@ p {
   position: relative;
   vertical-align: top;
 }
+
 .bubble::before {
   background-color: #F2F2F2;
   content: "\00a0";
@@ -64,17 +67,23 @@ p {
   -webkit-transform: rotate( 29deg ) skew( -35deg );
   width:  20px;
 }
+
 .me {
+  color: white;
   display: inherit;
-  margin: 5px 45px 5px 20px;
+  background-color: #0082FF;
+  opacity: 0.8;
+  margin: 5px 50% 5px 20px;
 }
 .me::before {
+  background-color: #0082FF;
+  opacity: 0.8;
   box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
   left: -9px;
 }
 .you {
   display: inherit;
-  margin: 5px 20px 5px 45px;
+  margin: 5px 20px 5px 50%;
 }
 .you::before {
   box-shadow: 2px -2px 2px 0 rgba( 178, 178, 178, .4 );

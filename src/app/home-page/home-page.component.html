@@ -2,26 +2,19 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <div #scrollMe class="bs-example" id="messages">
-
-        <!-- Point: 1 -->
         <div *ngFor="let message of messages | async">
-
-          <!-- Point: 2 -->
           <div class="bubble" [class.you]="isYou(message.email)" [class.me]="isMe(message.email)">
-            <p>{{ message.message }}</p>
+            <div style="margin-bottom: 3px;">{{ message.message }}</div>
             <div class="author">
               {{ message.displayName }} | {{ message.timestamp | date:"MM/dd/yy hh:mm a" }}
             </div>
           </div>
         </div>
       </div>
-      <figure class="highlight">
-
-        <!-- Point: 3 -->
+      <div class="highlight">
         <input type="textarea" class="message-text" [(ngModel)]="newMessage" (keyup.enter)="sendMessage()">
-        <a class="send-message" (click)="sendMessage()">SEND</a>
-
-      </figure>
+        <a class="send-message" style="cursor: pointer;" (click)="sendMessage()">SEND</a>
+      </div>
     </div>
   </div>
 </div>

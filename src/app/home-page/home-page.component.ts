@@ -32,26 +32,19 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
   }
 
   isYou(email) {
-    if (email === this.afService.email) {
-      return true;
-    }
-    else {
-      return false;
-    }
+    return email !== this.afService.email;
   }
 
   isMe(email) {
-    if (email === this.afService.email) {
-      return false;
-    }
-    else {
-      return true;
-    }
+    return email === this.afService.email;
   }
 
   sendMessage() {
-    console.log('new message: ', this.newMessage);
+    if (this.newMessage.trim() === '' || this.newMessage === null) {
+      return;
+    }
+
     this.afService.sendMessage(this.newMessage);
-    this.newMessage = '';
+    this.newMessage = null;
   }
 }
