@@ -1,1 +1,0 @@
-A Real-time TieqViet Chat App Demo
