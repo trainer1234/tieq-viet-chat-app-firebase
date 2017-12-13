@@ -2,6 +2,8 @@ import {Component, OnInit, AfterViewChecked, ElementRef, ViewChild} from '@angul
 import {AF} from '../providers/af';
 import {FirebaseListObservable} from 'angularfire2/database-deprecated';
 
+declare function require(name:string);
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -44,7 +46,9 @@ export class HomePageComponent implements OnInit, AfterViewChecked {
       return;
     }
 
-    this.afService.sendMessage(this.newMessage);
+    const tieqViet = require('tieq-viet');
+
+    this.afService.sendMessage(tieqViet.encode(this.newMessage));
     this.newMessage = null;
   }
 }
